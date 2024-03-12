@@ -7,7 +7,7 @@ import {Link as Anchor} from "react-router-dom"
 function Home() {
   return (
     <>
-    <main className="grow flex items-center flex-col flex-wrap gap-5 pb-5">
+    <main className="grow flex items-center flex-col flex-wrap gap-5 pb-5 h-full">
           <Hero></Hero>
           <div className="flex flex-col gap-5 px-1 py-5">
             <h2 className="text-2xl font-semibold">Find the perfect destination</h2>

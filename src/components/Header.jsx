@@ -7,7 +7,7 @@ function Header() {
     clases = ["border p-1 bg-black text-white rounded lg:p-2 lg:font-semibold","border p-1 bg-white text-black rounded lg:p-2 lg:font-semibold"]
   } else if(useLocation().pathname == "/cities") {
     clases = ["border p-1 bg-white text-black rounded lg:p-2 lg:font-semibold","border p-1 bg-black text-white rounded lg:p-2 lg:font-semibold"]
-  }
+  } else {clases = ["border p-1 bg-white text-black rounded lg:p-2 lg:font-semibold","border p-1 bg-white text-black rounded lg:p-2 lg:font-semibold"]}
   return (
     <>
     <header className="flex bg-black text-white py-3 px-1 items-center md:px-3 fixed w-full">
