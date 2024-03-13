@@ -5,4 +5,7 @@ export async function getCities(){
     return response.data.data
 }
 
-getCities()
+export async function getCityById(id){
+    let response = await axios.get("http://localhost:4000/api/cities/"+id)
+    return response.data.data
+}
