@@ -1,31 +1,25 @@
 import React,{useEffect,useState,useRef} from 'react'
 import { getCities } from '../services/cities'
 import CityCard from '../components/CityCard'
+import { useDispatch, useSelector } from 'react-redux'
+import { filtredCities, loadCities } from '../redux/actions/citiesActions'
 
 function Cities() {
-  const [ciudades,setCiudades] = useState([])
-  const [filtrado,setFiltrado] = useState([])
+  let inputCiudades = useRef(null)
+  let dispatch = useDispatch()
+  let ciudades = useSelector((store) => store.ciudadesStore.citiesFiltred)
 
   useEffect(()=> {
     getCities().then((data)=> {
-      setCiudades(data)
-      setFiltrado(data)
+      dispatch(loadCities(data))
     })
   },[])
 
-  let inputCiudades = useRef(null)
-
   function filtroCiudades(){
-    let filtrados = filtroName(ciudades,inputCiudades.current.value)
-    setFiltrado(filtrados)
+    dispatch(filtredCities(inputCiudades.current.value))
   }
 
-  function filtroName(ciudades,valor){
-    let filtrado = ciudades.filter( (ciudad) => ciudad.name.toLowerCase().startsWith(valor.toLowerCase().trim()) )
-    return filtrado
-  }
-
-  let cityCards = filtrado.map((ciudad) => <CityCard key={ciudad._id} ciudad={ciudad}></CityCard>)
+  let cityCards = ciudades.map((ciudad) => <CityCard key={ciudad._id} ciudad={ciudad}></CityCard>)
 
   return (
     <>
@@ -45,6 +39,5 @@ function Cities() {
     </>
   )
 }
-
 
 export default Cities
