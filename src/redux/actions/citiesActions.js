@@ -11,3 +11,9 @@ export const filtredCities = createAction("filtredCities",(value)=>{
         payload : value
     }
 })
+
+export const cityId = createAction("cityId",(id)=>{
+    return {
+        payload : id
+    }
+})
