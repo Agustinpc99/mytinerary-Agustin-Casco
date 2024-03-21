@@ -24,14 +24,14 @@ function City() {
     
 
   return (
-    <section className='grow flex flex-col justify-evenly items-center md:mt-20'>
+    <section className='grow flex flex-col justify-evenly items-center mt-16 md:mt-20'>
         <div className='flex flex-col items-center w-full bg-black'>
             <Anchor className='self-start' to={"/cities"}><button className='self-start text-sm md:text-xl bg-white text-black p-2 mb-1 rounded-e'>Back cities</button></Anchor>
             <img className='lg:w-[1024px] object-cover rounded-xl' src={ciudad.image} alt={"Imagen de "+ciudad.name} />
             <h2 className='py-5 text-xl font-semibold underline font-serif text-white md:text-3xl'>{ciudad.name}</h2>
         </div>
         <p className='text-xl font-semibold pt-5 lg:text-4xl'>Ours Itinerarys</p>
-        {itinerarios.length > 1 ? ItinerariosSeccion : <p className='text-lg font-bold'>Under construction</p>}
+        {itinerarios.length > 1 ? ItinerariosSeccion : <p className='text-lg font-bold'>No itinerary</p>}
     </section>
   )
 }
