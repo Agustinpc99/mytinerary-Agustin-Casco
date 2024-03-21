@@ -38,7 +38,7 @@ function Header() {
         </div>
       </>)
     } else if (user.first_name){
-      setEstado(<><button onClick={logOut} className="border p-1 bg-red-800 text-white rounded lg:p-2 lg:font-semibold hover:scale-105">LogOut</button></>)
+      setEstado(<><button onClick={logOut} className="border p-1 bg-blue-950 text-white rounded lg:p-2 lg:font-semibold hover:scale-105">LogOut</button></>)
     }
     
   }
