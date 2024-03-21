@@ -5,7 +5,7 @@ export async function register(data){
         let response = await axios.post("http://localhost:4000/api/auth/register",data)
         return response.data
     } catch (error) {
-        return null
+        return error.response.data
     }
 }
 
@@ -14,7 +14,7 @@ async function login(data){
         let response = await axios.post("http://localhost:4000/api/auth/login",data)
         return response.data
     } catch (error) {
-        return null
+        return error.response.data
     }
 }
 
@@ -26,7 +26,7 @@ async function loginWithToken(){
         })
         return response.data
     } catch (error) {
-        return null
+        return error.response.data
     }
 }
 
