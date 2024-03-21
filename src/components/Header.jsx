@@ -33,12 +33,12 @@ function Header() {
     } else if(!estado && !user.first_name) {
       setEstado(<>
         <div className="flex max-md:flex-col text-xs gap-3 md:text-2xl lg:text-3xl">
-          <Anchor onClick={closeButt} to={"/login"} className="border p-1 max-md:h-6 bg-white text-black rounded lg:p-2 lg:font-semibold">SingIn</Anchor>
-          <Anchor onClick={closeButt} to={"/register"} className="border p-1 max-md:h-6 bg-white text-black rounded lg:p-2 lg:font-semibold">SingUp</Anchor>
+          <Anchor onClick={closeButt} to={"/login"} className="border p-1 max-md:h-6 bg-white text-black rounded lg:p-2 lg:font-semibold hover:scale-105">SingIn</Anchor>
+          <Anchor onClick={closeButt} to={"/register"} className="border p-1 max-md:h-6 bg-white text-black rounded lg:p-2 lg:font-semibold hover:scale-105">SingUp</Anchor>
         </div>
       </>)
     } else if (user.first_name){
-      setEstado(<><button onClick={logOut} className="border p-1 bg-red-800 text-white rounded lg:p-2 lg:font-semibold">LogOut</button></>)
+      setEstado(<><button onClick={logOut} className="border p-1 bg-red-800 text-white rounded lg:p-2 lg:font-semibold hover:scale-105">LogOut</button></>)
     }
     
   }
@@ -49,9 +49,9 @@ function Header() {
           <h1 className="text-xl md:text-3xl lg:text-5xl">My Tinerary</h1>
           <div className="grow"></div>
           <nav className="flex gap-3 md:text-2xl lg:text-3xl ">
-            <Anchor className={clases[0]} to="/">Home</Anchor>
-            <Anchor className={clases[1]} to="/cities">Cities</Anchor>
-            {estado}<button className="border bg-white text-black rounded lg:font-semibold" onClick={logSing}><img className='h-6 md:h-9 w-8 md:w-12 object-cover' src={user.image ? user.image : "https://icons.veryicon.com/png/o/miscellaneous/domain-icons/my-account-login.png"} alt="" /></button>
+            <Anchor className={clases[0] + " hover:scale-105"} to="/">Home</Anchor>
+            <Anchor className={clases[1] + " hover:scale-105"} to="/cities">Cities</Anchor>
+            {estado}<button className="border bg-white rounded hover:scale-105" onClick={logSing}><img className='h-6 md:h-9 w-8 md:w-12' src={user.image ? user.image : "https://icons.veryicon.com/png/o/miscellaneous/domain-icons/my-account-login.png"} alt="" /></button>
           </nav>
         </header>
     </>

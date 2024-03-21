@@ -47,14 +47,14 @@ function Carousel() {
     <>
     <h3 className='text-xl font-bold'>Popular Mytineraries</h3>
     <div className='flex'>
-        <button className='w-[20%] xl:w-[12%]' onClick={prev}><img src="/izquierda.png" alt="Flecha anterior" /></button>
+        <button className='w-[20%] xl:w-[12%] hover:scale-90' onClick={prev}><img src="/izquierda.png" alt="Flecha anterior" /></button>
         <div className='flex flex-wrap justify-evenly gap-3'>
             <CarouselItem ciudad={ciudad1} ></CarouselItem>
             <CarouselItem ciudad={ciudad2} ></CarouselItem>
             <CarouselItem ciudad={ciudad3} ></CarouselItem>
             <CarouselItem ciudad={ciudad4} ></CarouselItem>
         </div>
-        <button className='w-[20%] xl:w-[12%]' onClick={next}><img src="/derecha.png" alt="Flecha siguiente" /></button>
+        <button className='w-[20%] xl:w-[12%] hover:scale-90' onClick={next}><img src="/derecha.png" alt="Flecha siguiente" /></button>
     </div>
     </>
 
